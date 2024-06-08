@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mongodb
+  namespace: vfbootcamp
   labels:
     app: mongodb
 spec:
@@ -29,6 +30,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mongodb-service
+  namespace: vfbootcamp
   labels:
     app: mongodb
 spec:
