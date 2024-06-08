@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: vfbootcamp
-          image: yildirim7mustafa/vfbootcamp:latest
+          image: yildirim7mustafa/vfbootcamp:b49f9609e9b26bf96bf0bc7571b50a3a894e9613
           ports:
             - containerPort: 8080
           env:
