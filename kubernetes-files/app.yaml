@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vfbootcamp
+  namespace: vfbootcamp
+  labels:
+    app: vfbootcamp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vfbootcamp
+  template:
+    metadata:
+      labels:
+        app: vfbootcamp
+    spec:
+      containers:
+        - name: vfbootcamp
+          image: yildirim7mustafa/vfbootcamp:a8f476b7ba8221602e6966773f92e5a522259620
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_APPLICATION_NAME
+              value: "vfBootcamp"
+            - name: SPRING_DATA_MONGODB_AUTHENTICATION_DATABASE
+              value: "admin"
+            - name: SPRING_DATA_MONGODB_USERNAME
+              value: "rootuser"
+            - name: SPRING_DATA_MONGODB_PASSWORD
+              value: "rootpass"
+            - name: SPRING_DATA_MONGODB_DATABASE
+              value: "vfbootcamp"
+            - name: SPRING_DATA_MONGODB_PORT
+              value: "27017"
+            - name: SPRING_DATA_MONGODB_HOST
+              value: "mongodb-service"
+            - name: SPRING_DATA_MONGODB_AUTO_INDEX_CREATION
+              value: "true"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vfbootcamp-service
+  namespace: vfbootcamp
+  labels:
+    app: vfbootcamp
+spec:
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: vfbootcamp
