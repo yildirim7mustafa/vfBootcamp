@@ -74,6 +74,12 @@ This setup ensures that whenever Jenkins is triggered (manually or automatically
    username: admin
    password: prom-operator
    ```
+Prometheus
+![image](https://github.com/yildirim7mustafa/vfBootcamp/assets/72528911/e3895507-fcff-4eeb-bcbe-4f924df5fd45)
+Grafana
+![image](https://github.com/yildirim7mustafa/vfBootcamp/assets/72528911/612ff92d-e088-4e73-a9d5-b499357c1369)
+
+
 
 
 
