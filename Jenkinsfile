@@ -12,7 +12,7 @@ pipeline {
         stage("Clone Repo & build"){
             steps{
                cleanWs()
-               sh 'git clone --branch main https://yildirim7mustafa:<my-personal-access-token>@github.com/yildirim7mustafa/vfBootcamp.git'
+               sh 'git clone --branch main https://yildirim7mustafa:<github-personal-access-token>@github.com/yildirim7mustafa/vfBootcamp.git'
                echo "Clone repo success"
                dir("vfBootcamp/"){
                     script {
@@ -22,7 +22,7 @@ pipeline {
                }
             }
         }
-        stage("Build"){
+        stage("Build & tag with commit-id"){
             steps{
                 dir("vfBootcamp/"){
                     script {
@@ -35,11 +35,11 @@ pipeline {
                 }
             }
         }
-        stage('PushtoACR') {
+        stage('Push to dockerhub') {
             steps {
                 script {
                     // Docker login
-                    sh 'docker login -u yildirim7mustafa -p "my-dockerhub-password" '
+                    sh 'docker login -u yildirim7mustafa -p "dockerhub-pass" '
                     sh "docker tag vfbootcamp:${env.COMMIT_ID} yildirim7mustafa/vfbootcamp:${env.COMMIT_ID}"
                     sh "docker push yildirim7mustafa/vfbootcamp:${env.COMMIT_ID}"
                     sh 'docker system prune -af'
@@ -61,10 +61,13 @@ pipeline {
                     sh 'git push'
                 }
                 }
-    
+                
+                
             }
         }
-
+        
+        
+        
     }
         
     }
