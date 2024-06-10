@@ -14,7 +14,7 @@ It's simple web application, it's include get and post endpoints.
     cd vfBootcamp
     ```
 
-For local development you can use mongodb with docker compose 
+For local development you can use mongodb with docker compose. 
 
 * **Run mongodb with docker-compose**:
     ```bash
