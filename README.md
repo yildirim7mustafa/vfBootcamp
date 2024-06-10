@@ -45,7 +45,7 @@ For local development you can use mongodb with docker compose.
 
 ### Configure Jenkins & ArgoCD
 
-This setup ensures that whenever Jenkins is triggered (manually or automatically), it will build the application, create a Docker image tagged with the commit ID, update the Kubernetes YAML file with the new image tag, and trigger Argo CD to deploy the new version automatically.
+This setup ensures that whenever Jenkins is triggered (manually or automatically), it will build the application, create a Docker image tagged with the commit ID, update the Kubernetes YAML file with the new image tag, and trigger Argo CD to deploy the new version automatically..
 
 ### Jenkins pipeline
 
