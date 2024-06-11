@@ -2,7 +2,7 @@
 
 Tech: Java,Spring,Mongodb,Maven,Kubernetes,Docker,Git,ArgoCD,Jenkins,
 
-It's simple web application, it's include get and post endpoints.
+It's simple web application, it's include get and post endpoints..
 
 ![bootcamp](https://github.com/yildirim7mustafa/vfBootcamp/assets/72528911/f887cb6b-0043-4b40-8410-05b1d600323b)
 
