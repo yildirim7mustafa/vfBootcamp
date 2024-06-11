@@ -1,6 +1,6 @@
 # Hello! this is Vodofone DevOps Bootcamp Task
 
-Tech: Java,Spring,Mongodb,Maven,Kubernetes,Docker,Git,ArgoCD,Jenkins,
+Tech: Java,Spring,Mongodb,Maven,Kubernetes,Docker,Git,ArgoCD,Jenkins
 
 It's simple web application, it's include get and post endpoints..
 
