@@ -20,7 +20,7 @@ public class UserController {
     private final UserRepository userRepository;
 
     // get all users
-    @GetMapping("getAllUsersss")
+    @GetMapping("getAllUsersssss")
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
