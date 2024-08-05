@@ -5,6 +5,9 @@ metadata:
   namespace: vfbootcamp
   labels:
     app: vfbootcamp
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: vfbootcamp=yildirim7mustafa/vfbootcamp
+    argocd-image-updater.argoproj.io/vfbootcamp.update-strategy: latest
 spec:
   replicas: 1
   selector:
